@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Brand Colors */
+  --color-brand-orange: #F97316;
+  --color-brand-green: #10B981;
+  --color-brand-black: #111827;
+  --color-brand-gray-dark: #374151;
+  --color-brand-gray-light: #6B7280;
+  --color-brand-border: #E5E7EB;
+  --color-brand-bg-light: #F9FAFB;
+  --color-brand-white: #FFFFFF;
+  
+  /* Semantic Mappings */
+  --color-primary: #F97316;
+  --color-success: #10B981;
+  --color-warning: #FBBF24;
+  --color-error: #EF4444;
+
+  /* Sidebar Theme — dark rail */
+  --color-sidebar-bg: #111111;
+  --color-sidebar-active-bg: rgba(249, 115, 22, 0.14);
+  --color-sidebar-active-text: #F97316;
+  --color-sidebar-border: #1E1E1E;
+  --color-sidebar-hover: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-black antialiased;
+    font-weight: 400;
+  }
+}
+
+/* Studio keyframe animations */
+@keyframes studioSlideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes chipPop {
+  0%   { opacity: 0; transform: scale(0.7); }
+  75%  { transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+}
